@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	goics "github.com/jordic/goics"
+	goics "github.com/francoishill/goics"
 )
 
 func TestComponentCreation(t *testing.T) {
@@ -147,10 +147,9 @@ func TestLineWriterLongLine(t *testing.T) {
 	}
 }
 
-
 func Test2ongLineWriter(t *testing.T) {
 	goics.LineSize = 10
-	
+
 	w := &bytes.Buffer{}
 
 	result := &bytes.Buffer{}

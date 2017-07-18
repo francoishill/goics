@@ -3,7 +3,7 @@
 
 Alpha status
 
-[![Build Status](https://travis-ci.org/jordic/goics.svg?branch=master)](https://travis-ci.org/jordic/goics)
+[![Build Status](https://travis-ci.org/francoishill/goics.svg?branch=master)](https://travis-ci.org/francoishill/goics)
 
 After trying to decode some .ics files and review available go packages, I decided to start writing this pacakge.
 

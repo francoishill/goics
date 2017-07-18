@@ -4,7 +4,7 @@ import (
 	//"strings"
 	"testing"
 
-	goics "github.com/jordic/goics"
+	goics "github.com/francoishill/goics"
 )
 
 var TLines = []string{
