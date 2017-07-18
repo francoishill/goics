@@ -7,7 +7,7 @@ import (
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/jordic/goics"
+	"github.com/francoishill/goics"
 )
 
 // We define our struct as mysql row
