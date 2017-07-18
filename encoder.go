@@ -2,6 +2,7 @@ package goics
 
 import (
 	"io"
+	"sort"
 	"strings"
 	"time"
 )
@@ -35,11 +36,19 @@ type Component struct {
 // Writes the component to the Writer
 func (c *Component) Write(w *ICalEncode) {
 	w.WriteLine("BEGIN:" + c.Tipo + CRLF)
-	// Iterate over component properites
-	for key, val := range c.Properties {
-		w.WriteLine(WriteStringField(key, val))
 
+	propKeys := make([]string, 0, len(c.Properties))
+	for k := range c.Properties {
+		propKeys = append(propKeys, k)
 	}
+	sort.Strings(propKeys)
+
+	// Iterate over component properites
+	for _, key := range propKeys {
+		val := c.Properties[key]
+		w.WriteLine(WriteStringField(key, val))
+	}
+
 	for _, xc := range c.Elements {
 		xc.Write(w)
 	}
